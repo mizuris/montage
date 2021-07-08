@@ -1,0 +1,73 @@
+.footer {
+  background-color: #005733;
+  color: white;
+  width: 100%;
+  padding: 3rem;
+}
+
+.footerAbout h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.footerAbout p {
+  font-size: 0.9rem;
+}
+
+.footer button {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footerContact {
+  display: flex;
+}
+
+.footerContact p {
+  display: inline;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.footerContact p span {
+  font-weight: bold;
+}
+
+.footerIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 0.3rem;
+}
+
+.footerMenu {
+  margin: 1rem 0 0.8rem;
+  padding: 0;
+}
+
+.footerMenu a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 0.3rem;
+  font-weight: lighter;
+  color: #00be6f;
+}
+
+.footerMenu a:first-of-type {
+  margin-left: 0;
+}
+
+.footerMenu a:last-of-type {
+  margin-right: 0;
+}
+
+.footerCopyright {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
