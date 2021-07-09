@@ -6,6 +6,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
 import { IoIosMail } from "react-icons/io";
 import Link from "next/link";
+import ContactBox from "./ContactBox";
 
 function Footer() {
   return (
@@ -21,39 +22,25 @@ function Footer() {
               rozwijający się zespół.
             </p>
           </div>
-          <Button variant="light">Dołącz do nas</Button>
+          <Link href="/praca" passHref>
+            <Button size="sm" variant="light">
+              Dołącz do nas
+            </Button>
+          </Link>
         </Col>
         <Col className="mb-4" lg={4} md={12}>
-          <div className={styles.footerContact}>
-            <div className={styles.footerIcon}>
-              <FaMapMarkerAlt />
-            </div>
-            <p>
-              <span>Żnin 88-400, ul. Słoneczna 12</span>, Polska
-            </p>
-          </div>
-          <div className={styles.footerContact}>
-            <div className={styles.footerIcon}>
-              <HiPhone />
-            </div>
-            <p>
-              <span>(+48) 508 346 323</span>
-            </p>
-          </div>
-          <div className={styles.footerContact}>
-            <div className={styles.footerIcon}>
-              <IoIosMail />
-            </div>
-            <p>
-              <span>abpbud@wp.pl</span>
-            </p>
-          </div>
+          <ContactBox
+            icon={<FaMapMarkerAlt />}
+            text="Żnin 88-400, ul. Słoneczna 12, Polska"
+          />
+          <ContactBox icon={<HiPhone />} text="(+48) 508 346 323" />
+          <ContactBox icon={<IoIosMail />} text="abpbud@wp.pl" />
         </Col>
         <Col lg={4} md={12} className="text-center">
           <div className={styles.footerNavigation}>
             <img
               src="/logo/logo-color.png"
-              alt="#"
+              alt="Montage logo"
               className={styles.footerLogo}
             />
             <hr />

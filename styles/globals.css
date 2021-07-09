@@ -13,11 +13,11 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', 'Ubuntu', 'Calibri', 'Roboto', sans-serif;
+  font-family: "Poppins", "Ubuntu", "Calibri", "Roboto", sans-serif;
 }
 
 p {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .active {
@@ -28,10 +28,11 @@ p {
 .active::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 70%;
-  height: .2rem;
+  height: 0.2rem;
   background-color: rgb(0, 150, 70);
 }
+

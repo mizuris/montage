@@ -1,10 +1,17 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import Header from "../components/Header";
 import styles from "../styles/Kontakt.module.css";
+import { TiBusinessCard } from "react-icons/ti";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { HiPhone } from "react-icons/hi";
+import { IoIosMail } from "react-icons/io";
+import { GrCreditCard } from "react-icons/gr";
+import ContactBox from "../components/ContactBox";
+import MailToButton from "../components/MailToButton";
 
-function kontakt() {
+function Kontakt() {
   return (
     <main>
       <Head>
@@ -15,37 +22,46 @@ function kontakt() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Container fluid className={styles.kontaktTop}>
         <Header title="Kontakt" />
         <div className={styles.kontaktTopImage} />
       </Container>
-      <Container className="mt-4 mb-4">
-        <Row>
-          <Header title="Kontakt" />
-          <Col sm={6}>
-            <p>
-              Wysyłając zgłoszenie rekrutacyjne do ADAMSKI Sp. z o.o.
-              (Pracodawca, administrator danych), zgadzasz się na przetwarzanie
-              przez Pracodawcę Twoich danych osobowych zawartych w zgłoszeniu
-              rekrutacyjnym w celu prowadzenia rekrutacji na stanowisko wskazane
-              w ogłoszeniu.
-            </p>
-          </Col>
-          <Col sm={6}>
-            <p>
-              Twoje dane osobowe wskazane w Kodeksie pracy lub w innych ustawach
-              szczegółowych (według wymogów ogłoszenia), przetwarzamy w oparciu
-              o przepisy prawa i ich podanie jest konieczne do wzięcia udziału w
-              rekrutacji. Pozostałe dane osobowe (np. wizerunek) przetwarzamy na
-              podstawie Twojej dobrowolnej zgody, którą wyraziłaś/eś wysyłając
-              nam swoje zgłoszenie rekrutacyjne i ich podanie nie ma wpływu na
-              możliwość udziału w rekrutacji.
-            </p>
-          </Col>
-        </Row>
+
+      <Container as="section" className="mt-4 mb-4">
+        <Header title="Dane" />
+        <ContactBox icon={<TiBusinessCard />} text="Montage Sp. z o.o." />
+        <ContactBox
+          icon={<GrCreditCard />}
+          text="NIP: PL000-000-00-00, REGON: 000000000"
+        />
+        <ContactBox
+          icon={<FaMapMarkerAlt />}
+          text="ul. Słoneczna 12, 88-400 Żnin, Polska"
+        />
+        <ContactBox icon={<HiPhone />} text="(+48) 508 346 323" />
+        <ContactBox icon={<IoIosMail />} text="abpbud@wp.pl" />
+      </Container>
+
+      <Container as="section" className="mb-4">
+        <Header title="Rekrutacje" />
+        <p>
+          Wysyłając zgłoszenie rekrutacyjne do Montage Sp. z o.o. (Pracodawca,
+          administrator danych), zgadzasz się na przetwarzanie przez Pracodawcę
+          Twoich danych osobowych zawartych w zgłoszeniu rekrutacyjnym w celu
+          prowadzenia rekrutacji na stanowisko wskazane w ogłoszeniu.
+        </p>
+        <p>
+          Wyślij swoje zgłoszenie i załącz CV w załączniku:{" "}
+          <MailToButton
+            email="abpbud@wp.pl"
+            subject="Zgłoszenie kandydatury"
+            body="Dzień dobry, przesyłam zgłoszenie swojej kandydatury przez stronę www.montage-com.pl. Moje CV załączam w załączniku."
+          />
+        </p>
       </Container>
     </main>
   );
 }
 
-export default kontakt;
+export default Kontakt;

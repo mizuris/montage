@@ -7,11 +7,12 @@ import { HiPhone } from "react-icons/hi";
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [background, setBackground] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
       let scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= 100) {
+      if (scrolled >= 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -22,7 +23,7 @@ function Navigation() {
   return (
     <Navbar
       variant="dark"
-      className={styles.navbarFlex}
+      className={`${styles.navbarFlex} ${background ? styles.expanded : ""}`}
       fixed="top"
       expand="lg"
     >
@@ -33,7 +34,10 @@ function Navigation() {
           className={styles.navbarBrand}
         />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Toggle
+        onClick={() => setBackground(!background)}
+        aria-controls="navbar-nav"
+      />
       <Navbar.Collapse id="navbar-nav">
         <Nav className={styles.navLinks}>
           <Link href="/" passHref>

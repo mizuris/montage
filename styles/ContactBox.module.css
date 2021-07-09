@@ -1,0 +1,22 @@
+.contactBox {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.contactBox:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.contactBox:last-child {
+  padding-bottom: 0.5rem;
+}
+
+.contactBox span {
+  font-weight: 500;
+}
+
+.divider {
+  margin: 0 0.4rem;
+}
