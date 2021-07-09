@@ -21,6 +21,10 @@
   font-size: 1.2rem;
 }
 
+.footerAbout p {
+  font-weight: lighter;
+}
+
 .footer button {
   font-weight: bold;
   margin-bottom: 0.5rem;

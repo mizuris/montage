@@ -1,29 +1,26 @@
-.pracaTop {
+.kontaktTop {
     min-height: 50vh;
     position: relative;
     padding: 0;
     margin: 0;
 }
 
-.pracaTop h1 {
+.kontaktTop h1 {
     position: absolute;
     bottom: 1rem;
     left: 5rem;
     color: rgb(255, 255, 255);
 }
 
-.pracaTop h1::before {
+.kontaktTop h1::before {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgb(0, 150, 70);
-    width: 120%;
-    height: .2rem;
 }
 
-.pracaTopImage {
-    background: url("/images/job-top.png") no-repeat center center;
+.kontaktTopImage {
+    background: url("/images/contact-top.jpg") no-repeat center center;
     filter: brightness(40%);
     -webkit-background-size: cover;
     -moz-background-size: cover;

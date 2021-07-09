@@ -59,7 +59,6 @@ function Footer() {
             <hr />
             <p className={styles.footerMenu}>
               <Link href="/">Strona główna</Link> |{" "}
-              <Link href="/ofirmie">O firmie</Link> |
               <Link href="/praca">Praca</Link> |{" "}
               <Link href="/realizacje">Realizacje</Link> |
               <Link href="/kontakt">Kontakt</Link>

@@ -1,29 +1,26 @@
-.pracaTop {
+.realizacjeTop {
     min-height: 50vh;
     position: relative;
     padding: 0;
     margin: 0;
 }
 
-.pracaTop h1 {
+.realizacjeTop h1 {
     position: absolute;
     bottom: 1rem;
     left: 5rem;
     color: rgb(255, 255, 255);
 }
 
-.pracaTop h1::before {
+.realizacjeTop h1::before {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgb(0, 150, 70);
-    width: 120%;
-    height: .2rem;
 }
 
-.pracaTopImage {
-    background: url("/images/job-top.png") no-repeat center center;
+.realizacjeTopImage {
+    background: url("/images/galery-top.png") no-repeat bottom center;
     filter: brightness(40%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -37,4 +34,11 @@
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.realizacjeItem {
+    width: 100%;
+    height: auto;
+    transition: 200ms ease;
+    position: relative;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
 
-function Header({ title, data, xOffset, yOffset }) {
+function Header({ title, xOffset, yOffset }) {
   return (
     <h1
       data-header={title}

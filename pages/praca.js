@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { Container } from "react-bootstrap";
-import styles from "../styles/Praca.module.css";
 import Header from "../components/Header";
+import styles from "../styles/Praca.module.css";
 
 function Praca() {
   return (
@@ -17,7 +17,7 @@ function Praca() {
       </Head>
       <Container fluid className={styles.pracaTop}>
         <Header title="Praca" />
-        <div className={styles.pracaTopImg} />
+        <div className={styles.pracaTopImage} />
       </Container>
       <Container className="mt-4 mb-4">
         <Header title="Zatrudniamy" />
