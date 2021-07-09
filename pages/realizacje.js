@@ -7,7 +7,7 @@ import styles from "../styles/Realizacje.module.css";
 
 function Realizacje() {
   return (
-    <main>
+    <main className="building ">
       <Head>
         <title>Realizacje - Montage Sp. z o.o.</title>
         <meta
@@ -21,39 +21,8 @@ function Realizacje() {
         <div className={styles.realizacjeTopImage} />
       </Container>
       <Container>
-        <Row>
-          <Col sm={4}>
-            <img
-              data-source="Campanille Bydgoszcz"
-              className={styles.realizacjeItem}
-              src="/images/job1.jpg"
-              alt=""
-            />
-          </Col>
-          <Col sm={4}>
-            <img
-              data-source="Campanille Bydgoszcz"
-              className={styles.realizacjeItem}
-              src="/images/job2.jpg"
-              alt=""
-            />
-          </Col>
-          <Col sm={4}>
-            <img
-              data-source="Campanille Bydgoszcz"
-              className={styles.realizacjeItem}
-              src="/images/job3-vert.jpg"
-              alt=""
-            />
-          </Col>
-          <Col sm={12}>
-            <img
-              data-source="BMW Motors Bydgoszcz"
-              className={styles.realizacjeItem}
-              src="/images/job4.jpg"
-              alt=""
-            />
-          </Col>
+        <Row className="mt-5 mb-5 pb-5 pt-5">
+          <Header title="Strona w budowie" />
         </Row>
       </Container>
     </main>

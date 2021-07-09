@@ -43,7 +43,9 @@ export default function Home() {
             wykonania robót budowlanych, gwarantują wysoką jakość i dokładność
             robót oraz trwałość i niezawodność budowanych obiektów.
           </p>
-          <Button variant="success">NASZE REALIZACJE</Button>
+          <Link href="/realizacje" passHref>
+            <Button variant="success">NASZE REALIZACJE</Button>
+          </Link>
         </Col>
         <Col sm={{ order: "first" }} md={6} className={styles.homeImageSection}>
           <img
@@ -74,7 +76,9 @@ export default function Home() {
           <p>
             Oferujemy <strong>wysokie zarobki</strong> - przekonaj się sam.
           </p>
-          <Button variant="success">WIĘCEJ O PRACY</Button>
+          <Link href="/praca" passHref>
+            <Button variant="success">WIĘCEJ O PRACY</Button>
+          </Link>
         </Col>
         <Col
           sm={{ order: "first" }}
