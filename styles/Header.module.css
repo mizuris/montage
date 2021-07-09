@@ -1,0 +1,26 @@
+.customHeader {
+    position: relative;
+    font-weight: bold;
+}
+
+.customHeader::before {
+    content: attr(data-header);
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    color: rgba(10, 95, 45, 0.1);
+    font-size: 3.5rem;
+    z-index: -1;
+    font-weight: lighter;
+}
+
+.customHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(0, 150, 70);
+
+}

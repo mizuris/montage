@@ -1,17 +1,24 @@
 .footer {
-  background-color: #005733;
+  background-color: rgb(10, 95, 45);
   color: white;
   width: 100%;
-  padding: 3rem;
+  padding: 3rem 3rem 1rem;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -0.3rem;
+  right: 0;
+  width: 50%;
+  height: .6rem;
+  background-color: rgb(0, 150, 70);
 }
 
 .footerAbout h4 {
   font-weight: bold;
   font-size: 1.2rem;
-}
-
-.footerAbout p {
-  font-size: 0.9rem;
 }
 
 .footer button {
@@ -29,10 +36,6 @@
   margin-bottom: 0;
 }
 
-.footerContact p span {
-  font-weight: bold;
-}
-
 .footerIcon {
   width: 2rem;
   height: 2rem;
@@ -40,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: rgba(65, 65, 65, 1);
   border-radius: 0.3rem;
 }
 
@@ -54,8 +57,7 @@
   text-decoration: none;
   color: inherit;
   margin: 0 0.3rem;
-  font-weight: lighter;
-  color: #00be6f;
+  color: rgb(255, 255, 255);
 }
 
 .footerMenu a:first-of-type {
@@ -68,6 +70,11 @@
 
 .footerCopyright {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-align: center;
+}
+
+.footerLogo {
+  max-height: 60px;
+  margin: 0 auto;
 }

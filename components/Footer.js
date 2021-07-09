@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "../styles/Footer.module.css";
 import { Row, Col, Button } from "react-bootstrap";
@@ -36,7 +37,7 @@ function Footer() {
               <HiPhone />
             </div>
             <p>
-              <span>(+48) 000 000 000</span>
+              <span>(+48) 508 346 323</span>
             </p>
           </div>
           <div className={styles.footerContact}>
@@ -44,13 +45,18 @@ function Footer() {
               <IoIosMail />
             </div>
             <p>
-              <span>office@company.com</span>
+              <span>abpbud@wp.pl</span>
             </p>
           </div>
         </Col>
-        <Col lg={4} md={12}>
+        <Col lg={4} md={12} className="text-center">
           <div className={styles.footerNavigation}>
-            <h2> Montage Sp. z o.o.</h2>
+            <img
+              src="/logo/logo-color.png"
+              alt="#"
+              className={styles.footerLogo}
+            />
+            <hr />
             <p className={styles.footerMenu}>
               <Link href="/">Strona główna</Link> |{" "}
               <Link href="/ofirmie">O firmie</Link> |
@@ -62,7 +68,9 @@ function Footer() {
         </Col>
       </Row>
       <Row>
-        <p className={styles.footerCopyright}>Montage Sp. z o.o. &copy; 2021</p>
+        <p className={styles.footerCopyright}>
+          Montage Sp. z o.o. &copy; 2021 | Wszystkie prawa zastrzeżone.
+        </p>
       </Row>
     </footer>
   );

@@ -1,45 +1,62 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import styles from "../styles/Navigation.module.css";
+import { HiPhone } from "react-icons/hi";
 
 function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      let scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
+  }, []);
+
   return (
     <Navbar
+      variant="dark"
       className={styles.navbarFlex}
       fixed="top"
-      bg="dark"
-      variant="dark"
       expand="lg"
     >
-      <Navbar.Brand href="/">Montage</Navbar.Brand>
-      <div>
-        <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav">
-          <Nav>
-            <Link href="/" passHref>
-              <Nav.Link>Strona główna</Nav.Link>
-            </Link>
-            <Link href="/ofirmie" passHref>
-              <Nav.Link>O firmie</Nav.Link>
-            </Link>
-            <Link href="/realizacje" passHref>
-              <Nav.Link>Realizacje</Nav.Link>
-            </Link>
-            <NavDropdown title="Praca" id="nav-dropdown">
-              <NavDropdown.Item href="#">Pozycja 1</NavDropdown.Item>
-              <NavDropdown.Item href="#">Pozycja 2</NavDropdown.Item>
-              <NavDropdown.Item href="#">Pozycja 3</NavDropdown.Item>
-              <NavDropdown.Item href="#">Pozycja 4</NavDropdown.Item>
-              <NavDropdown.Item href="#">Pozycja 5</NavDropdown.Item>
-              <NavDropdown.Item href="#">Pozycja 6</NavDropdown.Item>
-            </NavDropdown>
-            <Link href="/kontakt" passHref>
-              <Nav.Link>Kontakt</Nav.Link>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </div>
+      <Navbar.Brand href="/">
+        <img
+          src="/logo/logo-color.png"
+          alt="Motage logo"
+          className={styles.navbarBrand}
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Collapse id="navbar-nav">
+        <Nav className={styles.navLinks}>
+          <Link href="/" passHref>
+            <Nav.Link>Strona główna</Nav.Link>
+          </Link>
+          <Link href="/praca" passHref>
+            <Nav.Link>Praca</Nav.Link>
+          </Link>
+          <Link href="/realizacje" passHref>
+            <Nav.Link>Realizacje</Nav.Link>
+          </Link>
+          <Link href="/kontakt" passHref>
+            <Nav.Link>
+              <HiPhone /> Kontakt
+            </Nav.Link>
+          </Link>
+        </Nav>
+      </Navbar.Collapse>
+      <div
+        className={`${styles.navbarBackground} ${
+          isScrolled ? styles.navbarScrolled : styles.navbardDefault
+        }`}
+      />
     </Navbar>
   );
 }
