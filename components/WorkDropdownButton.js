@@ -2,12 +2,12 @@ import React from "react";
 import { ButtonGroup, DropdownButton, Dropdown } from "react-bootstrap";
 import { Link } from "react-scroll";
 
-function WorkDropdownButton({ jobs }) {
+function WorkDropdownButton({ title, jobs }) {
   return (
     <ButtonGroup>
       <DropdownButton
         as={ButtonGroup}
-        title="Stanowiska"
+        title={title}
         id="bg-nested-dropdown"
         variant="success"
         size="sm"

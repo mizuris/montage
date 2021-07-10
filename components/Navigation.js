@@ -6,6 +6,7 @@ import styles from "../styles/Navigation.module.css";
 import { HiPhone } from "react-icons/hi";
 
 function Navigation() {
+  const [navExpanded, setNavExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [background, setBackground] = useState(false);
 
@@ -22,24 +23,23 @@ function Navigation() {
 
   return (
     <Navbar
+      className={`${styles.navbarFlex} ${navExpanded ? styles.expanded : ""}`}
       variant="dark"
-      className={`${styles.navbarFlex} ${background ? styles.expanded : ""}`}
-      fixed="top"
       expand="lg"
+      fixed="top"
+      expanded={navExpanded}
+      onToggle={() => setNavExpanded(!navExpanded)}
     >
       <Navbar.Brand href="/">
         <img
           src="/logo/logo-color.png"
-          alt="Motage logo"
+          alt="Montage logo"
           className={styles.navbarBrand}
         />
       </Navbar.Brand>
-      <Navbar.Toggle
-        onClick={() => setBackground(!background)}
-        aria-controls="navbar-nav"
-      />
-      <Navbar.Collapse id="navbar-nav">
-        <Nav className={styles.navLinks}>
+      <Navbar.Toggle onClick={() => setBackground(navExpanded)} />
+      <Navbar.Collapse>
+        <Nav onSelect={() => setNavExpanded(false)} className={styles.navLinks}>
           <Link href="/" passHref>
             <Nav.Link>Strona główna</Nav.Link>
           </Link>

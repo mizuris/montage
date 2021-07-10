@@ -22,7 +22,7 @@ export default function Home() {
           <h1>MONTAGE SP. Z O.O.</h1>
           <p>
             <strong>Zbuduj</strong> z nami coś <strong>wielkiego.</strong>{" "}
-            Dołącz do naszej wykwalifikowanych specjalistów i zostań jednym z
+            Dołącz do naszych wykwalifikowanych specjalistów i zostań jednym z
             nich.
           </p>
           <Link href="/kontakt" passHref>

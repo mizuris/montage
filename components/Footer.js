@@ -18,8 +18,7 @@ function Footer() {
             <p>
               Montage Spółka z Ograniczoną Odpowiedzialnością to firma budowlana
               zajmująca się eksportem usług budowlanych na teren Unii
-              Europejskiej. Tworzymy wysoko wykwalifikowaną kardę, tworząc wciąż
-              rozwijający się zespół.
+              Europejskiej. Tworzymy wysoko wykwalifikowaną kardę.
             </p>
           </div>
           <Link href="/praca" passHref>

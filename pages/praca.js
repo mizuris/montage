@@ -1,11 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import {
-  Container,
-  Button,
-  ButtonGroup,
-  DropdownButton,
-} from "react-bootstrap";
+import Link from "next/link";
+import { Container, Button } from "react-bootstrap";
 import Header from "../components/Header";
 import styles from "../styles/Praca.module.css";
 import WorkOfferTable from "../components/WorkOfferTable";
@@ -46,9 +42,11 @@ function Praca() {
           znajdziemy dla Ciebie miejsce i wszystkieg <strong>nauczymy.</strong>{" "}
           Szukamy osób sumiennych i skupionych na pracy.
         </p>
-        <Button variant="success" className="mb-3">
-          Aplikuj
-        </Button>
+        <Link href="/kontakt" passHref>
+          <Button variant="success" className="mb-3">
+            Aplikuj
+          </Button>
+        </Link>
       </Container>
 
       <Container as="section" className="mt-4 mb-4">
@@ -56,8 +54,9 @@ function Praca() {
         <div className={styles.pracaJobsButtons}>
           <p>Aktualnie poszukujemy pracowników na stanowiska:</p>
           <WorkDropdownButton
+            title="Sprawdź"
             jobs={[
-              "Murzarz",
+              "Murarz",
               "Cieśla",
               "Ślusarz",
               "Monter el. żelbet.",
