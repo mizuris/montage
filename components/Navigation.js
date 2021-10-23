@@ -8,7 +8,7 @@ import { HiPhone } from "react-icons/hi";
 function Navigation() {
   const [navExpanded, setNavExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [background, setBackground] = useState(false);
+  const [, setBackground] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -45,9 +45,6 @@ function Navigation() {
           </Link>
           <Link href="/praca" passHref>
             <Nav.Link>Praca</Nav.Link>
-          </Link>
-          <Link href="/realizacje" passHref>
-            <Nav.Link>Realizacje</Nav.Link>
           </Link>
           <Link href="/kontakt" passHref>
             <Nav.Link>
