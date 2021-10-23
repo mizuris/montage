@@ -33,7 +33,7 @@ function Kontakt() {
         <ContactBox icon={<TiBusinessCard />} text="Montage Sp. z o.o." />
         <ContactBox
           icon={<GrCreditCard />}
-          text="NIP: PL000-000-00-00, REGON: 000000000"
+          text="NIP: PL562-180-69-14, REGON: 364802068"
         />
         <ContactBox
           icon={<FaMapMarkerAlt />}
