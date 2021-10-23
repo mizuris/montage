@@ -53,7 +53,8 @@ function Footer() {
       </Row>
       <Row>
         <p className={styles.footerCopyright}>
-          Montage Sp. z o.o. &copy; 2021 | Wszystkie prawa zastrzeżone.
+          Montage Sp. z o.o. &copy; {new Date().getFullYear()} | Wszystkie prawa
+          zastrzeżone.
         </p>
       </Row>
     </footer>
